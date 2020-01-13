@@ -1,16 +1,14 @@
 import React from 'react';
-import Home from "../Pages/Home";
-import Login from "../Pages/Login";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import UserProfile from "../pages/UserProfile";
 import {Route} from 'react-router-dom'
 function Main() {
   return (
     <div style={mainStyle}>
-      <Route exact path='/'>
-        <Home/>
-      </Route>
-      <Route path='/login'>
-        <Login/>
-      </Route>
+      <Route exact path='/'component={Home}/>
+      <Route exact path='/login'component={Login}/>
+      <Route exact path='/user'component={UserProfile}/>
     </div>
   )
 }

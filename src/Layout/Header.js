@@ -8,6 +8,7 @@ export default function Header() {
       <div style={linkDiv}>
         <Link style={linkStyle} to='/'>Home</Link>
         <Link style={linkStyle} to='/login'>Login</Link>
+        <Link style={linkStyle} to='/user'>User</Link>
       </div>
     </header>
   );
