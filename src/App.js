@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router} from 'react-router-dom'
 import './App.css';
 import Header from './Layout/Header';
 import Footer from './Layout/Footer';
@@ -7,9 +8,11 @@ import Main from './Layout/Main';
 function App() {
   return (
     <div style={appLayout}>
-      <Header/>
-      <Main/>
-      <Footer/>
+      <Router>
+        <Header/>
+        <Main/>
+        <Footer/>
+      </Router>
     </div>
   );
 }

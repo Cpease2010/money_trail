@@ -1,9 +1,14 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 export default function Header() {
   return (
     <header style={headerStyle}>
       <p>MoneyTrail</p>
+      <div style={linkDiv}>
+        <Link style={linkStyle} to='/'>Home</Link>
+        <Link style={linkStyle} to='/login'>Login</Link>
+      </div>
     </header>
   );
 }
@@ -14,7 +19,20 @@ const headerStyle = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
-  fontSize: 'calc(10px + 2vmin)',
+  fontSize: '24px',
+  color: 'white',
+  padding: '16px'
+}
+
+const linkStyle = {
+  fontSize: '16px',
+  display: 'flex',
   color: 'white'
+}
+
+const linkDiv = {
+  display: 'flex',
+  width: '30vw',
+  justifyContent: 'space-around',
+  padding: '8px'
 }
