@@ -3,7 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <header style={headerStyle}>
-      <p>PaperTrail</p>
+      <p>MoneyTrail</p>
     </header>
   );
 }
