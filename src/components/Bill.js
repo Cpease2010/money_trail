@@ -22,11 +22,11 @@ export class Bill extends Component {
         <input 
         value={dueDate}
         style={inputStyle} 
-        type="number" 
+        type="number"
         name="billDate" />
         <div>
           <button
-            type="submit"
+            type="button"
             style={{
               width: "56px",
               boxShadow:
@@ -36,7 +36,7 @@ export class Bill extends Component {
             Edit
           </button>
           <button
-            type="submit"
+            type="button"
             style={{
               width: "56px",
               boxShadow:
@@ -46,7 +46,7 @@ export class Bill extends Component {
             Save
           </button>
           <button
-            type="submit"
+            type="button"
             style={{
               width: "56px",
               boxShadow:
