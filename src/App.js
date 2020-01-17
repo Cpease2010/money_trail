@@ -46,7 +46,8 @@ class App extends Component {
 const postStore = (state = [], action) => {
     switch (action.type) {
         case 'INITIAL_FETCH':
-            return action.payload;
+            state.push(...action.payload)
+            return state;
         case 'ADD_Bill':
             return state.push(action.newBill)
         default: return state;
