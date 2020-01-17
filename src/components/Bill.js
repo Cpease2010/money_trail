@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 
-export class Bill extends Component {
-  render() {
-    const {billName, billAmount, dueDate} = this.props.bill
+export default function Bill(props) {
+    const {billName, billAmount, dueDate} = props.bill
     return (
       <form style={formStyle} action="" method="post">
         <input
@@ -19,9 +18,9 @@ export class Bill extends Component {
           name="billAmount"
           placeholder="Bill Amount"
         />
-        <input 
+        <input
         value={dueDate}
-        style={inputStyle} 
+        style={inputStyle}
         type="number"
         name="billDate" />
         <div>
@@ -58,8 +57,6 @@ export class Bill extends Component {
         </div>
       </form>
   );
-  }
-  
 }
 
 const formStyle = {
@@ -82,4 +79,3 @@ const inputStyle = {
   textAlign: 'center'
 };
 
-export default Bill;

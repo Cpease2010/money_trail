@@ -13,9 +13,10 @@ class App extends Component {
         this.state = {
             allBills: [],
             newBill: {
-                name: '',
-                dueDate: '',
-                billAmount: 0
+                id: '',
+                billName: '',
+                billAmount: 0,
+                dueDate: ''
             }
         }
     }
@@ -30,7 +31,6 @@ class App extends Component {
     }
 
     render() {
-        console.log('this is internal state', this.state)
         return (
             <div style={appLayout}>
                 <Router>
