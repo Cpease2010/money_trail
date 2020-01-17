@@ -1,28 +1,31 @@
 import React from "react";
 
 export default function Bill(props) {
-    const {billName, billAmount, dueDate} = props.bill
+    const {id, title} = props.bill;
     return (
       <form style={formStyle} action="" method="post">
+          <label htmlFor="billName">Bill Name:</label>
         <input
-          value={billName}
+          value={id}
           style={inputStyle}
           type="text"
           name="billName"
-          placeholder="Bill Name"
+          placeholder="Who's Paid!"
         />
+        <label htmlFor="billAmount">Bill Amount:</label>
         <input
-          value={billAmount}
+          value={title}
           style={inputStyle}
           type="text"
           name="billAmount"
-          placeholder="Bill Amount"
+          placeholder="How Much!"
         />
+        <label htmlFor="billDate">Bill Date:</label>
         <input
-        value={dueDate}
         style={inputStyle}
-        type="number"
-        name="billDate" />
+        type="date"
+        name="billDate"
+        placeholder='When You Pay!'/>
         <div>
           <button
             type="button"
