@@ -2,11 +2,12 @@ import React from "react";
 
 export default function Bill(props) {
     const {id, title} = props.bill;
+    let {billName, billAmount, billDate} = props.bill;
     return (
       <form style={formStyle} action="" method="post">
           <label htmlFor="billName">Bill Name:</label>
         <input
-          value={id}
+          value={billName || id}
           style={inputStyle}
           type="text"
           name="billName"
@@ -14,7 +15,7 @@ export default function Bill(props) {
         />
         <label htmlFor="billAmount">Bill Amount:</label>
         <input
-          value={title}
+          value={title || billAmount}
           style={inputStyle}
           type="text"
           name="billAmount"
@@ -22,8 +23,9 @@ export default function Bill(props) {
         />
         <label htmlFor="billDate">Bill Date:</label>
         <input
+        value={billDate}
         style={inputStyle}
-        type="date"
+        type="text"
         name="billDate"
         placeholder='When You Pay!'/>
         <div>

@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
 export class AddBill extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            billName: 'hello',
+            billName: '',
             billAmount: '',
             billDate: '',
             id: ''
@@ -26,7 +27,9 @@ export class AddBill extends Component {
             },
             body: JSON.stringify(this.state)})
             .then(response => response.json())
-            .then(value => console.log('i am value: ', value))
+            .then(value => {
+                this.props.addBill('ADD_BILL', value)
+            })
     }
 
     render() {
@@ -41,6 +44,9 @@ export class AddBill extends Component {
     }
 }
 
+const addBill = (type = 'ADD_BILL', bill) => {
+    return {type, newBill: bill}
+}
 const formStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -58,4 +64,9 @@ const inputStyle = {
   marginRight: '4px'
 }
 
-export default AddBill;
+export default connect(
+    null,
+    {
+        addBill
+    }
+)(AddBill);
